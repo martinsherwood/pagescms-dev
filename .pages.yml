@@ -5,26 +5,11 @@ content:
   - name: posts
     label: Posts
     type: collection
-    path: 'src/posts'
-    view:
-      fields: [ title, published, date ]
-    fields:
-      - name: published
-        label: Published
-        type: boolean
-        default: true
-      - name: date
-        label: Date
-        type: date
-      - name: title
-        label: Title
-        type: string
-      - name: body
-        label: Body
-        type: rich-text
+    path: 'src/content/posts'
+
   - name: site
     label: Site settings
-    path: src/_data/site.json
+    path: src/data/site-settings.json
     type: file
     fields:
       - name: title
@@ -38,7 +23,3 @@ content:
         label: Website URL
         type: string
         pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
-      - name: cover
-        label: Preview image
-        type: image
-        description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)
